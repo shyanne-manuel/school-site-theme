@@ -48,28 +48,6 @@
 		"typography": {
 			"defaultFontSizes": false,
 			"fluid": false,
-			"fontSizes": [
-				{
-					"name": "Small",
-					"size": "1rem",
-					"slug": "small"
-				},
-				{
-					"name": "Medium",
-					"size": "1.13rem",
-					"slug": "medium"
-				},
-				{
-					"name": "Large",
-					"size": "1.5rem",
-					"slug": "large"
-				},
-				{
-					"name": "Extra Large",
-					"size": "2rem",
-					"slug": "x-large"
-				}
-			],
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
@@ -114,11 +92,37 @@
 					"name": "Noto Sans",
 					"slug": "noto-sans"
 				}
+			],
+			"fontSizes": [
+				{
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "1.13rem",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "1.5rem",
+					"slug": "large"
+				},
+				{
+					"name": "Extra Large",
+					"size": "2rem",
+					"slug": "x-large"
+				}
 			]
 		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		},
 		"elements": {
 			"h1": {
 				"typography": {
@@ -155,6 +159,16 @@
 					"fontFamily": "var(--wp--preset--font-family--noto-sans)",
 					"fontStyle": "normal",
 					"fontWeight": "400"
+				}
+			},
+			"link": {
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--hover)"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		},
