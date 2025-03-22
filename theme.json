@@ -2,6 +2,36 @@
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#ffffff",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#444444",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#003c71",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#71003c",
+					"name": "Accent",
+					"slug": "accent"
+				},
+				{
+					"color": "#0057a4",
+					"name": "Hover",
+					"slug": "hover"
+				}
+			]
+		},
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
