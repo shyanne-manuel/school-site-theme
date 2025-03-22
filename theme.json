@@ -46,6 +46,31 @@
 			]
 		},
 		"typography": {
+			"defaultFontSizes": false,
+			"fluid": false,
+			"fontSizes": [
+				{
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "1.13rem",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "1.5rem",
+					"slug": "large"
+				},
+				{
+					"name": "Extra Large",
+					"size": "2rem",
+					"slug": "x-large"
+				}
+			]
+		},
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
