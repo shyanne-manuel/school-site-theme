@@ -24,7 +24,7 @@ function schoolsite_enqueues() {
         
             // Load lightgallery css
             wp_enqueue_style( 
-                'lightgallery-css', 
+                'lightgallery-css',
                 'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/dist/css/lightgallery.min.css', 
                 array(), 
                 '2.8.3'
