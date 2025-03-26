@@ -63,3 +63,6 @@ function schoolsite_setup() {
 
 add_action( 'after_setup_theme', 'schoolsite_setup' );
 
+
+// Calling Custom Post Types & Custom Taxonomies
+require get_template_directory() . '/inc/post-types-taxonomies.php';
