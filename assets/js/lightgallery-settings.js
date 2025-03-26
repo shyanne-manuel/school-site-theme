@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var galleryElement = document.querySelector('.lightgallery');
+    var galleryElement = document.querySelector('.wp-block-gallery'); // Target WordPress Gallery block
     if (galleryElement) {
         lightGallery(galleryElement, {
-            selector: '.gallery-item' // Selector for individual gallery items
+            selector: 'img', // Target links inside the gallery
+            download: false // Disable the download button (optional)
         });
     }
 });
