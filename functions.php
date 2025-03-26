@@ -23,22 +23,21 @@ function schoolsite_enqueues() {
     if ( is_front_page()) {
         
             // Load lightgallery css
-            wp_enqueue_style(
-                'schoolsite-lightgallery-style',
-                plugins_url( 'simple-lightgallery/assets/lightgallery/v1/css/lightgallery.min.css', __FILE__ ),
-                array(),
-                wp_get_theme()->get('Version'),
-                'all'
+            wp_enqueue_style( 
+                'lightgallery-css', 
+                'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/dist/css/lightgallery.min.css', 
+                array(), 
+                '2.8.3'
             );
         
         
             // Load lightgallery script
             wp_enqueue_script(
                 'schoolsite-lightgallery-script',
-                plugins_url( 'simple-lightgallery/assets/lightgallery/v1/js/lightgallery.min.js', __FILE__ ),
+                'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/lightgallery.min.js',
                 array(),
-                wp_get_theme()->get( 'Version' ),
-                array( 'strategy' => 'defer' )
+                '2.8.3',
+                true
             );
         
             // Enqueue Custom Settings Script
