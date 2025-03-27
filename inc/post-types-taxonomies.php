@@ -54,7 +54,7 @@ function schoolsite_custom_post_types() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-archive',
+        'menu_icon'          => 'dashicons-welcome-learn-more',
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
     );
     register_post_type( 'fwd-student', $args );
