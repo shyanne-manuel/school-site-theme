@@ -114,6 +114,11 @@ $args = array(
     'menu_position'      => 5,
     'menu_icon'          => 'dashicons-businessperson',
     'supports'           => array( 'title', 'editor', 'thumbnail' ),
+    'template'           => array( 
+                                array( 'core/paragraph', array( 'placeholder' => __( 'Enter job title here...' ) ) ),
+                                array( 'core/paragraph', array( 'placeholder' => __( 'Enter staff email here...' ) ) )
+                            ),
+    'template_lock'      => 'all'
 );
 register_post_type( 'fwd-staff', $args );
 
