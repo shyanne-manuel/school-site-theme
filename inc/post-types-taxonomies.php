@@ -217,6 +217,13 @@ $args = array(
     'show_admin_column' => true,
     'query_var'         => true,
     'rewrite'           => array( 'slug' => 'staff-categories' ),
+    // adding capabilities to remove ability to manage edit and delete terms
+    'capabilities'      => array(
+        'manage_terms' => 'do_not_allow',
+        'edit_terms'   => 'do_not_allow',
+        'delete_terms' => 'do_not_allow',
+        'assign_terms' => 'edit_posts'
+    )
 );
 register_taxonomy( 'fwd-staff-category', array( 'fwd-staff' ), $args );
 
