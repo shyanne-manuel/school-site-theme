@@ -78,7 +78,7 @@ require get_template_directory() . '/inc/post-types-taxonomies.php';
 
 
 
-// Changing placeholder title text for adding ne Staff post start code
+// Changing placeholder title text for adding new Staff post start code
 function staff_title_placeholder( $title, $post) {
     if ( $post->post_type == 'fwd-staff') {
         $staff_title = 'Add staff name';
@@ -87,4 +87,16 @@ function staff_title_placeholder( $title, $post) {
     return $title;
 }
 add_filter( 'enter_title_here', 'staff_title_placeholder', 10, 2 );
-// Changing placeholder title text for adding ne Staff post end code
+// Changing placeholder title text for adding new Staff post end code
+
+
+// Changing placeholder title text for adding new Student post start code
+function student_title_placeholder( $title, $post) {
+    if ( $post->post_type == 'fwd-student') {
+        $staff_title = 'Add student name';
+        return $student_title;
+    }
+    return $title;
+}
+add_filter( 'enter_title_here', 'student_title_placeholder', 10, 2 );
+// Changing placeholder title text for adding new Student post end code
