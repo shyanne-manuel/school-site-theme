@@ -19,38 +19,48 @@ function schoolsite_enqueues() {
         '12.1.0'
     );
 
-    // Lightgallery Plugin Codes Starts here
-    if ( is_front_page()) {
+   
+ // Lightgallery Plugin Codes Starts here
+ if ( is_front_page()) {
         
-            // Load lightgallery css
-            wp_enqueue_style( 
-                'lightgallery-css',
-                'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/dist/css/lightgallery.min.css', 
-                array(), 
-                '2.8.3'
-            );
-        
-        
-            // Load lightgallery script
-            wp_enqueue_script(
-                'schoolsite-lightgallery-script',
-                'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/lightgallery.min.js',
-                array(),
-                '2.8.3',
-                true
-            );
-        
-            // Enqueue Custom Settings Script
-            wp_enqueue_script(
-                'custom-lightgallery-init',
-                get_template_directory_uri() . 'assets/js/lightgallery-settings.js',
-                array('lightgallery-js'),
-                null,
-                true
-            );
+    // Load lightgallery css
+    wp_enqueue_style( 
+        'lightgallery-css',
+        get_theme_file_uri( 'assets/css/lightgallery-bundle.min.css'), 
+        array(), 
+        wp_get_theme()->get( 'Version' )
+    );
 
-    };
-    // Lightgallery Plugin Codes Ends here
+
+    // Load lightgallery script
+    wp_enqueue_script(
+        'schoolsite-lightgallery-script',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/lightgallery.min.js',
+        array(),
+        wp_get_theme()->get( 'Version' ),
+        array('strategy' => 'defer')
+    );
+
+    // Enqueue Custom Settings Script
+    wp_enqueue_script(
+        'custom-lightgallery-init',
+        get_theme_file_uri('assets/js/lightgallery-settings.js'),
+        array('schoolsite-lightgallery-script'),
+        wp_get_theme()->get( 'Version' ),
+        array('strategy' => 'defer')
+    );
+
+    // wp_enqueue_script(
+    //     'custom-lightgallery-thumbnail',
+    //     get_template_directory_uri() . 'assets/js/lightgallery-settings.js',
+    //     array('lightgallery-js'),
+    //     wp_get_theme()->get( 'Version' ),
+    //     array('strategy' => 'defer')
+    // );
+
+};
+// Lightgallery Plugin Codes Ends here
+
 }
 add_action( 'wp_enqueue_scripts', 'schoolsite_enqueues' );
 
