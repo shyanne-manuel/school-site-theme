@@ -78,13 +78,13 @@ require get_template_directory() . '/inc/post-types-taxonomies.php';
 
 
 
-// Changing placeholder title text for adding new Staff post start code
-// Changing placeholder title text for adding new Student post start code
 function post_title_placeholder( $title, $post) {
+    // Changing placeholder title text for adding new Student post start code
     if ( $post->post_type == 'fwd-student') {
         $student_title = 'Add student name';
         return $student_title;
     }
+    // Changing placeholder title text for adding new Staff post start code
     else if ( $post->post_type == 'fwd-staff') {
         $staff_title = 'Add staff name';
         return $staff_title;
@@ -92,4 +92,26 @@ function post_title_placeholder( $title, $post) {
     return $title;
 }
 add_filter( 'enter_title_here', 'post_title_placeholder', 10, 2 );
-// Changing placeholder title text for adding new Student post end code
+// Changing placeholder title text for adding new Student and Staff post end code
+
+
+function school_site_setup() {
+	add_editor_style( get_stylesheet_uri() );
+
+    // Add image sizes
+    add_image_size( '400x600', 400, 600, true );
+
+    add_image_size( '200x250', 400, 600, true );
+
+}
+add_action( 'after_setup_theme', 'school_site_setup' );
+
+// Make custom sizes selectable from WordPress admin.
+function school_site_add_custom_image_sizes( $size_names ) {
+	$new_sizes = array(
+		'400x500' => __( '400x500', 'school-site-theme' ),
+		'200x250' => __( '400x600', 'school-site-theme' ),
+	);
+	return array_merge( $size_names, $new_sizes );
+}
+add_filter( 'image_size_names_choose', 'school_site_add_custom_image_sizes' );
