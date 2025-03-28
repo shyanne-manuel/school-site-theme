@@ -56,6 +56,20 @@ function schoolsite_custom_post_types() {
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-welcome-learn-more',
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'template'           => array( 
+            array( 'core/paragraph', array( 'placeholder' => __( 'Enter student biography here...' ) ) ),
+            array( 
+                'core/buttons', 
+                array(), 
+                array(
+                    array( 
+                        'core/button', 
+                        array( 'text' => __( 'Portfolio', 'school-site-theme' ), ) 
+                    )
+                )
+            )
+        ),
+        'template_lock'      => 'all'
     );
     register_post_type( 'fwd-student', $args );
 
