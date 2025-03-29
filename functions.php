@@ -61,6 +61,40 @@ function schoolsite_enqueues() {
 };
 // Lightgallery Plugin Codes Ends here
 
+// -----------------------------------------------------------------------------------------
+
+// Animate on Scroll Plugin Codes Starts here
+
+ // Load AOS css
+ wp_enqueue_style( 
+    'custom-aos-css',
+    'https://unpkg.com/aos@2.3.1/dist/aos.css', 
+    array(), 
+    wp_get_theme()->get( 'Version' )
+);
+
+// Load AOS script
+wp_enqueue_script(
+    'custom-aos-script',
+    'https://unpkg.com/aos@2.3.1/dist/aos.js',
+    array(),
+    wp_get_theme()->get( 'Version' ),
+    array('strategy' => 'defer')
+);
+
+// Initialize AOS
+wp_enqueue_script(
+    'custom-aos-init',
+    get_theme_file_uri('assets/js/aos-initialize.js'),
+    array('custom-aos-script'),
+    wp_get_theme()->get( 'Version' ),
+    array('strategy' => 'defer')
+);
+
+
+
+// Animate on Scroll Plugin Codes Ends here
+
 }
 add_action( 'wp_enqueue_scripts', 'schoolsite_enqueues' );
 
