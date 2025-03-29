@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "school-site-blocks/animate-on-scroll",
+  "version": "0.1.0",
+  "title": "Animate On Scroll",
+  "category": "design",
+  "icon": "cover-image",
+  "description": "Adds animation on scroll effect",
+  "example": {},
+  "supports": {
+    "html": false,
+    "innerBlocks": true
+  },
+  "attributes": {
+    "animation": {
+      "type": "string",
+      "default": "fade-up"
+    }
+  },
+  "textdomain": "animate-on-scroll",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
