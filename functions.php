@@ -149,3 +149,6 @@ function school_site_add_custom_image_sizes( $size_names ) {
 	return array_merge( $size_names, $new_sizes );
 }
 add_filter( 'image_size_names_choose', 'school_site_add_custom_image_sizes' );
+
+// Load School Site Custom Blocks
+require get_template_directory() . '/school-site-blocks/school-site-blocks.php';
