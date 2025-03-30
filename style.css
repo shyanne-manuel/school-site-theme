@@ -14,3 +14,10 @@ Text Domain: school-site-theme
 Update URI: false
 */
 
+.page-id-44 .wp-block-template-part{
+    margin-top: 0rem;
+}
+
+.post-type-archive-fwd-student .wp-block-template-part {
+    margin-top: 0rem;
+}
