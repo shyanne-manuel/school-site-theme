@@ -143,8 +143,8 @@ add_action( 'after_setup_theme', 'school_site_setup' );
 // Make custom sizes selectable from WordPress admin.
 function school_site_add_custom_image_sizes( $size_names ) {
 	$new_sizes = array(
-		'400x500' => __( '400x500', 'school-site-theme' ),
-		'200x250' => __( '400x600', 'school-site-theme' ),
+		'400x600' => __( '400x600', 'school-site-theme' ),
+		'200x250' => __( '200x250', 'school-site-theme' ),
 	);
 	return array_merge( $size_names, $new_sizes );
 }
