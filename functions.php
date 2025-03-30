@@ -135,7 +135,7 @@ function school_site_setup() {
     // Add image sizes
     add_image_size( '400x600', 400, 600, true );
 
-    add_image_size( '200x250', 400, 600, true );
+    add_image_size( '200x250', 200, 250, true );
 
 }
 add_action( 'after_setup_theme', 'school_site_setup' );
